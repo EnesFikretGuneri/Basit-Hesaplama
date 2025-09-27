@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    int notlar[5][4]; // soldaki 5 girilecek kişi sayısı sağdaki 4 not
+    float ortalama=0;
+
+    // Notların kullanıcıdan alınması
+    for (int i = 0; i < 5; i++) {
+        printf("%d. ogrencinin 4 notunu giriniz (0-100 arasi):\n", i + 1);
+        for (int j = 0; j < 4; j++) {
+            int gecerli = 0; // Geçerli giriş kontrolü
+            while (!gecerli) {
+                printf("%d. not: ", j + 1);
+                scanf("%d", &notlar[i][j]);
+                if (notlar[i][j] >= 0 && notlar[i][j] <= 100) {
+                    gecerli = 1; 
+                } else {
+                    printf("Hata! Lutfen 0 ile 100 arasinda bir not giriniz.\n");
+                }
+            }
+        }
+    }
+
+    // Ortalama hesaplama ve sonucu yazdırma
+    for (int i = 0; i < 5; i++) {
+        int toplam = 0;
+        for (int j = 0; j < 4; j++) {
+            toplam += notlar[i][j];
+        }
+        ortalama = toplam / 4.0; // float bölme
+
+        printf("%d. ogrencinin ortalamasi: %.2f -> ", i + 1, ortalama);
+
+        if (ortalama < 50) {
+            printf("Kaldi\n");
+        } else {
+            printf("Gecti\n");
+        }
+    }
+
+    return 0;
+}
