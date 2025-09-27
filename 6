@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    int a=0;
+    int b=0;
+    int c=0;
+    int yedek=0;
+    
+    printf("Uc sayi giriniz: ");
+    scanf("%d", &a);
+    printf("Iki sayi daha giriniz: ");
+    scanf("%d", &b);
+    printf("Bir sayi daha giriniz: ");
+    scanf("%d", &c);
+
+    
+    if (a > b) {
+        yedek = a;
+        a = b;
+        b = yedek;
+    }
+
+    
+    if (a > c) {
+        yedek = a;
+        a = c;
+        c = yedek;
+    }
+
+    
+    if (b > c) {
+        yedek = b;
+        b = c;
+        c = yedek;
+    }
+
+    
+    printf("Kucukten buyuge siralama: %d %d %d\n", a, b, c);
+
+    return 0;
+}
