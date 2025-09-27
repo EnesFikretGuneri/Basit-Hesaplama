@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+float a=0;
+float b=0;
+
+int main() {
+    printf("Not bu sistem ilk sayı tabanlı islem yapar bu yuzden (b/a) gibi dusunmeyiniz\n ");
+    
+   //sayıları alacak
+    printf("Islem yapilmasi icin lutfen birinci sayiyi giriniz: ");
+    scanf("%f", &a);
+    
+    printf("Ikinci sayiyi giriniz: ");
+    scanf("%f", &b);
+    
+    //işlemler burda
+    
+    
+    printf("Toplam: %f\n", a + b);
+    printf("Fark: %f\n", a - b);
+    
+     // 0 için tanımsızlık varmı bakacak
+    if (b == 0) {
+        printf("Bolum : Bolme islemi yapılamadı lütfen tekrar deneyiniz\n"); 
+    } else {
+        printf("Bolum:%f\n", a/b);
+    }
+    
+    printf("Carpim: %f\n", a * b);
+    
+    
+    
+
+    
+    return 0;
+    
+    
+}
