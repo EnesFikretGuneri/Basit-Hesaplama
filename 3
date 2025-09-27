@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+
+char harf=0;
+
+
+
+int main() {
+    
+    
+    printf("Bir harf giriniz: ");
+    scanf(" %c", &harf);
+    
+
+    
+    switch(harf) {
+        
+        
+        //Önceden belirlenen Sesli harf caselerine gider 
+        case 'a':   printf("Sesli harf\n");break;
+        case 'e':   printf("Sesli harf\n");break;
+        case 'i':   printf("Sesli harf\n");break;
+        case 'o':   printf("Sesli harf\n");break;
+        case 'u':   printf("Sesli harf\n");break;
+        case 'A':   printf("Sesli harf\n");break;
+        case 'E':   printf("Sesli harf\n");break;
+        case 'I':   printf("Sesli harf\n");break;
+        case 'O':   printf("Sesli harf\n");break;
+        case 'U':   printf("Sesli harf\n");break;
+        
+        
+        
+        //burada Sessiz harf ve sayılar tespit edilip ona göre çıktı verilir
+        default:
+            if (harf >= 'a' && harf <= 'z')
+            {
+                printf("Sessiz harf\n");
+            }
+            else if (harf>='A' && harf <= 'Z')
+              { 
+                printf("Sessiz harf\n");
+              }
+            
+            else
+                
+               {
+                printf("Girdiginiz karakter harf degil!\n");
+               }
+    }
+    
+    return 0;
+}
