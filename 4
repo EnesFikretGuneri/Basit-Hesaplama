@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+signed int sayi=0;
+int degerdegiskeni=0;
+
+int main() {
+     
+    
+    printf("Bir sayi giriniz: ");
+    scanf("%d", &sayi);
+    
+    if (sayi <1)
+    //burda sayı 1 den küçük ise deger veremeyegeğini gösteriyor
+    {
+        printf("sayi 1 den kücük veya harf lütfen tekrar deneyiniz");
+        
+    }
+    
+    for (int degerdegiskeni = 1; degerdegiskeni <= sayi; degerdegiskeni++) {
+        if (degerdegiskeni > 50) {
+            break; 
+        }
+        if (degerdegiskeni % 3 == 0) {
+            continue; 
+        }
+        printf("%d\n", degerdegiskeni);
+    }
+    
+    return 0;
+}
+
